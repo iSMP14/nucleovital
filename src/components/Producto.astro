@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import producto2 from '../assets/producto_2.png';
+
 const caracteristicas = [
   "Potencia tus defensas con una carga de Vitaminas y Zinc.",
   "Aumenta la energía gracias a su aporte de Hierro.",
@@ -11,7 +14,7 @@ const caracteristicas = [
 <section id="producto" class="py-20 bg-white">
   <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
     <div class="flex justify-center">
-      <img src="https://horizons-cdn.hostinger.com/bd874045-14c3-48d1-88d8-444e65181c81/caja-nucleo-pills-yLGX1.png" alt="Frasco y caja del multivitamínico Nucleovital" class="w-full max-w-lg drop-shadow-xl" />
+      <Image src={producto2} alt="Frasco y caja del multivitamínico Nucleovital" class="w-full max-w-lg drop-shadow-xl" />
     </div>
     <div class="space-y-8">
       <h2 class="text-4xl font-bold text-gray-800">¿Qué es Nucleovital? Tu Multivitamínico Esencial</h2>
@@ -23,7 +26,7 @@ const caracteristicas = [
         <ul class="space-y-3">
           {caracteristicas.map((item) => (
             <li class="flex items-start space-x-3">
-              <span class="w-2 h-2 mt-2 bg-yellow-500 rounded-full flex-shrink-0"></span>
+              <span class="w-2 h-2 mt-2 bg-yellow-500 rounded-full shrink-0"></span>
               <span class="text-gray-700">{item}</span>
             </li>
           ))}

@@ -1,14 +1,16 @@
 ---
+import { Shield, Zap, Brain, Heart, Leaf, Bone } from '@lucide/astro';
+
 const beneficios = [
-  { title: "Sistema Inmune Fuerte", desc: "Con Vitaminas y Zinc, Nucleovital fortalece las defensas naturales de tu cuerpo." },
-  { title: "Energía y Vitalidad", desc: "El Hierro y Magnesio combaten la fatiga, dándote más energía en tu día a día." },
-  { title: "Claridad Mental", desc: "Un complejo de vitaminas que mejora la concentración y la función cognitiva." },
-  { title: "Salud Cardiovascular", desc: "Componentes como el Magnesio apoyan la salud de tu corazón para un bienestar integral." },
-  { title: "Con Colágeno y Betacaroteno", desc: "Ingredientes que cuidan tu piel y actúan como antioxidantes naturales." },
-  { title: "Huesos Fuertes con Calcio", desc: "El Calcio en nuestra fórmula contribuye a mantener tus huesos sanos y fuertes." }
+  { icon: Shield, title: "Sistema Inmune Fuerte", desc: "Con Vitaminas y Zinc, Nucleovital fortalece las defensas naturales de tu cuerpo." },
+  { icon: Zap, title: "Energía y Vitalidad", desc: "El Hierro y Magnesio combaten la fatiga, dándote más energía en tu día a día." },
+  { icon: Brain, title: "Claridad Mental", desc: "Un complejo de vitaminas que mejora la concentración y la función cognitiva." },
+  { icon: Heart, title: "Salud Cardiovascular", desc: "Componentes como el Magnesio apoyan la salud de tu corazón para un bienestar integral." },
+  { icon: Leaf, title: "Con Colágeno y Betacaroteno", desc: "Ingredientes que cuidan tu piel y actúan como antioxidantes naturales." },
+  { icon: Bone, title: "Huesos Fuertes con Calcio", desc: "El Calcio en nuestra fórmula contribuye a mantener tus huesos sanos y fuertes." }
 ];
 ---
-<section id="beneficios" class="py-20 bg-gradient-to-br from-red-50 to-yellow-50">
+<section id="beneficios" class="py-20 bg-linear-to-br from-red-50 to-yellow-50">
   <div class="container mx-auto px-4">
     <div class="text-center mb-16">
       <h2 class="text-4xl font-bold text-gray-800 mb-4">
@@ -22,6 +24,9 @@ const beneficios = [
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {beneficios.map((b) => (
         <div class="bg-white rounded-2xl p-8 shadow-lg hover:-translate-y-2 transition-transform duration-300">
+          <div class="flex items-center justify-center w-16 h-16 bg-linear-to-br from-red-500 to-yellow-500 rounded-full mb-6 mx-auto">
+            <b.icon class="w-8 h-8 text-white" />
+          </div>
           <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">{b.title}</h3>
           <p class="text-gray-600 text-center leading-relaxed">{b.desc}</p>
         </div>
