@@ -1,0 +1,33 @@
+---
+const sucursales = [
+  { name: "Farmacia Urgencia", address: "Colón N° 511, Arica" },
+  { name: "Farmacia El Cóndor", address: "Esmeralda N° 443, Los Andes" },
+  { name: "Farmacia Nueva Moderna", address: "Portus N° 144, Local 2, San Felipe" },
+  { name: "Farmacia Pumaitén", address: "Óscar Bonilla N° 177, Romeral" },
+  { name: "Farmacia San Francisco", address: "Avda. Comalle N° 143-B, Teno" },
+  { name: "Centro Naturista Vida Sana", address: "Prat N° 687 y Yungay N° 649, Curicó" },
+  { name: "Centro Naturista Larga Vida", address: "Maipú N° 1758, Molina" },
+  { name: "Centro Naturista Secretos de la Naturaleza", address: "Cruz N° 353, Constitución" },
+  { name: "Farmacia Prat", address: "Prat N° 212, Hualañé" },
+  { name: "Centro Naturista Vida Sana", address: "8 Oriente N° 1118, Local 2, Talca" },
+  { name: "Centro Naturista Vive Sano", address: "Calle Brasil N° 461, Linares" },
+  { name: "Centro Naturista Vida Sana", address: "Paseo La Merced, Pasaje Ninhue N° 69, Chillán" },
+  { name: "Local Tauro, Caracol Austral", address: "Local 9 – Punta Arenas" }
+];
+---
+<section id="sucursales" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4">Nuestras <span class="text-red-600">Sucursales</span> en Chile</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">Encuentra nuestros puntos de venta y centros naturistas en distintas ciudades del país.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {sucursales.map((s) => (
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <h3 class="text-lg font-semibold text-gray-800 mb-1">{s.name}</h3>
+          <p class="text-gray-600 text-sm">{s.address}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
